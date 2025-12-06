@@ -1,16 +1,57 @@
-# React + Vite
+# LocalChefBazaar Server
+>
+> **Frontend for a marketplace of local home-cooked meals**
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 📌 Overview
 
-Currently, two official plugins are available:
+LocalChefBazaar is a modern online platform designed to connect home cooks with customers looking for fresh, healthy, and affordable homemade meals.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This repository contains the **web application**, built with **React.js**, **Firebase Auth**, and **Tailwindcss**, providing the ui and functionality for the platform.
 
-## React Compiler
+## 🍽️ What LocalChefBazaar Offers
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Browse daily menus from local home cooks  
+- Check chef availability and meal schedules  
+- Place meal orders with secure payment support  
+- Real-time order tracking  
+- Ratings and reviews  
+- Role-based access (Admin, Chef, Customer)  
+- Easy onboarding for home cooks to earn from their kitchens  
 
-## Expanding the ESLint configuration
+## 🧰 Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **React.js**
+- **Firebase** for authentication
+- **React Router** for client side routing
+- **Tailwindcss + DaisyUI** for styling
+
+## 🚀 Installation & Setup
+
+### 1️⃣ Clone the repository
+
+```bash
+git clone https://github.com/utshomh/LocalChefBazaarClient.git
+cd LocalChefBazaarClient
+```
+
+2️⃣ Install dependencies (using pnpm)
+
+```bash
+pnpm install
+```
+
+3️⃣ Create an .env file
+
+Copy the example environment file and fill in your values:
+
+```bash
+cp .env.example .env.local
+```
+
+4️⃣ Start development server
+
+```bash
+pnpm run dev
+```
+
+## ❤️ Made with Love by UtshoMH
