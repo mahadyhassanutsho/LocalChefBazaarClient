@@ -25,8 +25,8 @@ const Navbar = () => {
         to={link.path}
         className={({ isActive }) =>
           `px-4 font-semibold ${
-            isActive ? "bg-accent/70" : "bg-inherit"
-          } rounded-full hover:bg-accent/50`
+            isActive ? "bg-accent/50" : "bg-inherit"
+          } rounded-full hover:bg-accent/30`
         }
       >
         {link.label}
@@ -53,7 +53,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="navbar px-4">
+    <div className="navbar px-4 rounded-b-box hover:shadow-xs transition-shadow">
       <div className="navbar-start gap-1">
         <div className="dropdown">
           <div

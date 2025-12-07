@@ -8,7 +8,7 @@ const Logo = () => {
       <img src={logo} className="aspect-square w-12 -rotate-12" />
       <div>
         <div className="h-1 w-full bg-primary/20 rounded-full group-hover:bg-primary/80 transition-colors" />
-        <h1 className="text-2xl font-bold group-hover:text-base-content/80">
+        <h1 className="text-2xl font-bold group-hover:text-base-content/75">
           LocalChefBazaar
         </h1>
       </div>

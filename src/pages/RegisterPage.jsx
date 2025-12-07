@@ -1,5 +1,5 @@
 import { Link, useLocation, useNavigate } from "react-router";
-import { useForm } from "react-hook-form";
+import { useForm, useWatch } from "react-hook-form";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import Lottie from "lottie-react";
 
@@ -13,10 +13,12 @@ import useToggle from "../hooks/useToggle";
 const RegisterPage = () => {
   const {
     register,
+    control,
     handleSubmit,
     reset,
     formState: { errors, isSubmitting },
   } = useForm();
+  const password = useWatch({ name: "password", control });
   const navigate = useNavigate();
   const { state } = useLocation();
   const { value: showPassword, toggle: toggleShowPassword } = useToggle();
@@ -25,6 +27,7 @@ const RegisterPage = () => {
 
   const handleRegister = async (data) => {
     const { email, password, address, displayName, image } = data;
+    const role = state?.role || "user";
 
     try {
       const photoURL = await uploadImage(image[0]);
@@ -35,6 +38,7 @@ const RegisterPage = () => {
         address,
         displayName,
         photoURL,
+        role,
       });
       alert.success(
         "Registered!",
@@ -138,6 +142,26 @@ const RegisterPage = () => {
               {errors.password && (
                 <p className="text-error text-xs font-semibold">
                   {errors.password.message}
+                </p>
+              )}
+            </div>
+            {/* Confirm Password */}
+            <div className="space-y-1">
+              <label className="text-base font-semibold">
+                Confirm Password:
+              </label>
+              <input
+                {...register("confirmPassword", {
+                  validate: (value) =>
+                    password === value || "Passwords do not match",
+                })}
+                type="password"
+                className="input w-full"
+                placeholder="Retype your Password"
+              />
+              {errors.confirmPassword && (
+                <p className="text-error text-xs font-semibold">
+                  {errors.confirmPassword.message}
                 </p>
               )}
             </div>
