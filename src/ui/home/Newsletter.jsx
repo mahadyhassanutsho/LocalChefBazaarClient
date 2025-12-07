@@ -30,9 +30,9 @@ const Newsletter = () => {
         <div className="relative w-full">
           <input
             type="email"
-            className="input input-lg px-4 w-full rounded-full text-base-content text-base"
+            className="input input-lg px-6 w-full rounded-full text-base-content text-base"
             required
-            placeholder="Enter your Email"
+            placeholder="Enter Your Email"
           />
           <button className="absolute top-0 right-1 translate-y-1 btn btn-primary rounded-full z-2">
             Subscribe

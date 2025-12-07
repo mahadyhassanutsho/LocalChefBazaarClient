@@ -53,7 +53,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="navbar px-4 rounded-b-box hover:shadow-xs transition-shadow">
+    <div className="navbar px-0 md:px-4 rounded-b-box hover:shadow-xs transition-shadow">
       <div className="navbar-start gap-1">
         <div className="dropdown">
           <div
