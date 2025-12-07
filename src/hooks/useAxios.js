@@ -7,7 +7,7 @@ const axiosInstance = axios.create({
   baseURL: `${import.meta.env.VITE_API_URL}/api`,
 });
 
-const useAxiosSecured = () => {
+const useAxios = () => {
   const { user } = useAuth();
 
   useEffect(() => {
@@ -26,4 +26,4 @@ const useAxiosSecured = () => {
   return axiosInstance;
 };
 
-export default useAxiosSecured;
+export default useAxios;

@@ -73,9 +73,9 @@
 
 ### My Profile
 
-- 🔘 Show name, email, image, address, role, status, chefId
-- 🔘 Buttons: Be a Chef, Be an Admin
-- 🔘 Send request to admin for role change
+- ✔️ Show name, email, image, address, role, status, chefId
+- ✔️ Buttons: Be a Chef, Be an Admin
+- ✔️ Send request to admin for role change
 
 ### My Orders
 

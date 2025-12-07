@@ -2,8 +2,8 @@ import { Link, NavLink } from "react-router";
 import { MdMenu } from "react-icons/md";
 
 import useAuth from "../../hooks/useAuth";
-import alert from "../../utils/alert";
 import Logo from "../shared/Logo";
+import Logout from "../auth/Logout";
 
 const privateLinks = [
   { path: "/", label: "Home" },
@@ -17,7 +17,7 @@ const publicLinks = [
 ];
 
 const Navbar = () => {
-  const { user, logoutUser } = useAuth();
+  const { user } = useAuth();
 
   const navLinks = (user ? privateLinks : publicLinks).map((link, index) => (
     <li key={index}>
@@ -33,24 +33,6 @@ const Navbar = () => {
       </NavLink>
     </li>
   ));
-
-  const handleLogout = async () => {
-    await alert.confirm(
-      "Are you sure?",
-      "You won't be able to access some feature while logged out",
-      async () => {
-        try {
-          await logoutUser();
-          alert.success("Logged In!", "You’ve signed in successfully.");
-        } catch (error) {
-          alert.error(
-            "Oops!",
-            error.message || "Something went wrong! Please try again."
-          );
-        }
-      }
-    );
-  };
 
   return (
     <div className="navbar px-0 md:px-4 rounded-b-box hover:shadow-xs transition-shadow">
@@ -95,9 +77,7 @@ const Navbar = () => {
               <Link to="/dashboard/profile" className="btn btn-sm btn-accent">
                 Profile
               </Link>
-              <button className="btn btn-sm btn-accent" onClick={handleLogout}>
-                Logout
-              </button>
+              <Logout className="btn btn-sm btn-accent">Logout</Logout>
             </ul>
           </div>
         ) : (

@@ -3,11 +3,11 @@ import { useQuery } from "@tanstack/react-query";
 import useAuth from "./useAuth";
 import useAxios from "./useAxios";
 
-const useRole = () => {
+const useUser = () => {
   const { user } = useAuth();
   const axios = useAxios();
   const {
-    data: role,
+    data: userFromDB,
     error,
     isError,
     isLoading,
@@ -17,15 +17,15 @@ const useRole = () => {
       axios
         .get(`/users?email=${user.email}`)
         .then((res) => res.data)
-        .then((data) => data[0].role),
+        .then((data) => data[0]),
   });
 
   return {
-    role,
+    user: userFromDB,
     isLoading,
     isError,
     error,
   };
 };
 
-export default useRole;
+export default useUser;

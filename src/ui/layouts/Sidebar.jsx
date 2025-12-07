@@ -10,12 +10,14 @@ import {
   FaUsers,
   FaUserShield,
   FaChartBar,
+  FaPowerOff,
 } from "react-icons/fa";
 
-import useRole from "../../hooks/useRole";
+import useUser from "../../hooks/useUser";
+import Logout from "../../ui/auth/Logout";
 import Loader from "../../ui/shared/Loader";
 
-const navLinksMap = {
+const navLinks = {
   user: [
     { path: "orders", name: "Orders", icon: FaBox },
     { path: "reviews", name: "Reviews", icon: FaStar },
@@ -34,15 +36,14 @@ const navLinksMap = {
 };
 
 const Sidebar = () => {
-  const { role, error, isError, isLoading } = useRole();
-  const navLinks = navLinksMap[role];
+  const { user, error, isError, isLoading } = useUser();
 
   if (isLoading) return <Loader />;
 
   if (isError) throw new Error(error.message);
 
   return (
-    <div className="py-2 min-h-full flex flex-col items-start bg-base-200 is-drawer-close:w-16 is-drawer-open:w-64 rounded-box">
+    <div className="py-2 min-h-full flex flex-col items-start bg-base-200 is-drawer-close:w-fit is-drawer-open:w-64 rounded-r-box">
       <ul className="menu w-full grow items-center gap-2">
         <li className="w-full">
           <NavLink
@@ -50,7 +51,7 @@ const Sidebar = () => {
             className={({ isActive }) =>
               `is-drawer-close:tooltip is-drawer-close:tooltip-right items-center ${
                 isActive ? "bg-accent/50" : "bg-inherit"
-              } rounded-full`
+              }`
             }
             data-tip="Homepage"
           >
@@ -59,7 +60,7 @@ const Sidebar = () => {
           </NavLink>
         </li>
 
-        {navLinks.map((link, i) => {
+        {navLinks[user.role].map((link, i) => {
           const Icon = link.icon;
           return (
             <li key={i} className="w-full">
@@ -68,7 +69,7 @@ const Sidebar = () => {
                 className={({ isActive }) =>
                   `is-drawer-close:tooltip is-drawer-close:tooltip-right items-center ${
                     isActive ? "bg-accent/50" : "bg-inherit"
-                  } rounded-full hover:bg-accent/25`
+                  } hover:bg-accent/25`
                 }
                 data-tip={link.name}
               >
@@ -80,6 +81,19 @@ const Sidebar = () => {
             </li>
           );
         })}
+
+        <li className="w-full">
+          <Logout className="btn btn-sm btn-warning">
+            <div
+              className="is-drawer-close:tooltip is-drawer-close:tooltip-bottom"
+              data-tip="Logout"
+            >
+              <FaPowerOff className="text-xl" />
+
+              <span className="is-drawer-close:hidden font-bold">Logout</span>
+            </div>
+          </Logout>
+        </li>
       </ul>
     </div>
   );
