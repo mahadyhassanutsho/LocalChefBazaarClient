@@ -20,10 +20,15 @@ This repository contains the **web application**, built with **React.js**, **Fir
 
 ## 🧰 Tech Stack
 
-- **React.js**
-- **Firebase** for authentication
-- **React Router** for client side routing
-- **Tailwindcss + DaisyUI** for styling
+- **React.js** — Core library for building the UI  
+- **Firebase** — Authentication, user management, and secure session handling  
+- **React Router** — Client-side routing for smooth, SPA-style navigation  
+- **TailwindCSS + DaisyUI** — Utility-first styling with prebuilt themeable UI components  
+- **React Icons** — Icon library for clean, lightweight icons  
+- **React Hook Form** — Performant and easy-to-use form handling and validation  
+- **SweetAlert2** — Beautiful, customizable pop-up alerts and confirmation dialogs  
+- **Axios** — HTTP client for API calls, fetching data, and handling requests  
+- **React Lottie** — Animation support using Lottie JSON files for smooth, lightweight animations  
 
 ## 🚀 Installation & Setup
 
