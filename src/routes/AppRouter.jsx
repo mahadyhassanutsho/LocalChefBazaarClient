@@ -2,6 +2,7 @@ import { createBrowserRouter, RouterProvider } from "react-router";
 
 // Routes
 import PrivateRoute from "./PrivateRoute";
+import AdminRoute from "./AdminRoute";
 // Layouts
 import DefaultLayout from "../layouts/DefaultLayout";
 import RootLayout from "../layouts/RootLayout";
@@ -13,6 +14,7 @@ import RegisterPage from "../pages/RegisterPage";
 import ProfilePage from "../pages/ProfilePage";
 // Common
 import ErrorPage from "../pages/ErrorPage";
+import UsersPage from "../pages/UsersPage";
 
 const router = createBrowserRouter([
   {
@@ -39,6 +41,11 @@ const router = createBrowserRouter([
         children: [
           { path: "", element: <ProfilePage /> },
           { path: "profile", element: <ProfilePage /> },
+          {
+            path: "admin/",
+            element: <AdminRoute />,
+            children: [{ path: "users", element: <UsersPage /> }],
+          },
         ],
       },
     ],

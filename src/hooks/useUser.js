@@ -12,7 +12,7 @@ const useUser = () => {
     isError,
     isLoading,
   } = useQuery({
-    queryKey: ["role", user.email],
+    queryKey: ["get-user-by-email", user.email],
     queryFn: () =>
       axios
         .get(`/users?email=${user.email}`)

@@ -38,6 +38,7 @@ const ProfilePage = () => {
   return (
     <div className="p-6 bg-base-200">
       <div className="max-w-2xl mx-auto">
+        {/* Image, Role and Status */}
         <div className="relative flex flex-col items-center">
           <span className="absolute top-0 right-0 badge badge-primary shadow-md capitalize">
             {user.role}
@@ -69,51 +70,65 @@ const ProfilePage = () => {
 
         <div className="flex flex-col gap-4">
           {/* Status */}
-          <div className="flex items-center gap-3">
-            <span
-              className={`w-4 h-4 rounded-full ${
-                user.status === "active" ? "bg-success" : "bg-error"
-              }`}
-            ></span>
-            <span className="font-semibold w-14">Status:</span>
-            <span className="capitalize">{user.status}</span>
+          <div className="space-y-1">
+            <div className="flex items-center gap-2">
+              <span
+                className={`w-4 h-4 rounded-full ${
+                  user.status === "active" ? "bg-success" : "bg-error"
+                }`}
+              ></span>
+              <span className="font-semibold">Status:</span>
+            </div>
+            <span className="capitalize ml-6">{user.status}</span>
           </div>
 
           {/* Role */}
-          <div className="flex items-center gap-3">
-            <FaUserShield className="text-primary w-4" />
-            <span className="font-semibold w-14">Role:</span>
-            <span className="capitalize">{user.role}</span>
+          <div className="space-y-1">
+            <div className="flex items-center gap-2">
+              <FaUserShield className="text-primary w-4" />
+              <span className="font-semibold">Role:</span>
+            </div>
+            <span className="capitalize ml-6">{user.role}</span>
           </div>
 
           {/* Email */}
-          <div className="flex items-center gap-3">
-            <FaEnvelope className="text-primary w-4" />
-            <span className="font-semibold w-14">Email:</span>
-            <span>{user.email}</span>
+          <div className="space-y-1">
+            <div className="flex items-center gap-2">
+              <FaEnvelope className="text-primary w-4" />
+              <span className="font-semibold">Email:</span>
+            </div>
+            <span className="ml-6">{user.email}</span>
           </div>
 
           {/* Address */}
-          <div className="flex items-center gap-3">
-            <FaMapMarkerAlt className="text-primary w-4" />
-            <span className="font-semibold w-14">Address:</span>
-            <span>{user.address}</span>
+          <div className="space-y-1">
+            <div className="flex items-center gap-2">
+              <FaMapMarkerAlt className="text-primary w-4" />
+              <span className="font-semibold">Address:</span>
+            </div>
+            <span className="ml-6">{user.address}</span>
           </div>
 
           {/* Chef ID — only if user.role === "chef" */}
           {user.role === "chef" && (
-            <div className="flex items-center gap-3">
-              <FaUserShield className="text-primary w-4" />
-              <span className="font-semibold w-14">Chef ID:</span>
-              <span>{user._id}</span>
+            <div className="space-y-1">
+              <div className="flex items-center gap-2">
+                <FaUserShield className="text-primary w-4" />
+                <span className="font-semibold">Chef ID:</span>
+              </div>
+              <span className="ml-6">{user._id}</span>
             </div>
           )}
 
           {/* Joined */}
-          <div className="flex items-center gap-3">
-            <FaCalendarAlt className="text-primary w-4" />
-            <span className="font-semibold w-14">Joined:</span>
-            <span>{new Date(user.createdAt).toLocaleDateString()}</span>
+          <div className="space-y-1">
+            <div className="flex items-center gap-2">
+              <FaCalendarAlt className="text-primary w-4" />
+              <span className="font-semibold">Joined:</span>
+            </div>
+            <span className="ml-6">
+              {new Date(user.createdAt).toLocaleString()}
+            </span>
           </div>
         </div>
 

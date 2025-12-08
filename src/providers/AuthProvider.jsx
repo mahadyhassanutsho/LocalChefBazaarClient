@@ -1,3 +1,4 @@
+import { redirect } from "react-router";
 import { createContext, useEffect, useState } from "react";
 import {
   createUserWithEmailAndPassword,
@@ -37,10 +38,14 @@ const AuthProvider = ({ children }) => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       setUser(currentUser);
       setLoading(false);
+
+      if (!user) {
+        redirect("/login");
+      }
     });
 
     return () => unsubscribe;
-  }, []);
+  }, [user]);
 
   return (
     <AuthContext.Provider

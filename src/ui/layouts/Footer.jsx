@@ -30,7 +30,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="flex flex-col md:flex-row md:items-start gap-4 md:gap-12">
+      <div className="flex flex-col md:flex-row md:flex-start flex-wrap gap-4 md:gap-12">
         <div className="space-y-2">
           <h6 className="font-bold text-lg">Working Hours</h6>
           <div className="flex flex-col gap-1">
@@ -48,27 +48,27 @@ const Footer = () => {
 
         <div className="space-y-2">
           <h6 className="font-bold text-lg">How to Reach Us</h6>
+
           <div className="flex flex-col gap-1">
             <span className="flex items-center gap-2">
               <FaPhone /> +880 1234-567890
             </span>
             <span className="flex items-center gap-2">
-              <FaMailBulk /> support@localchefbazaar.com
+              <FaMapMarker /> Tejgaon, Bangladesh
             </span>
             <span className="flex items-center gap-2">
-              <FaMapMarker /> Tejgaon, Bangladesh
+              <FaMailBulk /> support@localchefbazaar.com
             </span>
           </div>
         </div>
 
-        <div className="space-y-2">
-          <h6 className="font-bold text-lg">Our Location</h6>
+        <div className="tooltip tooltip-open" data-tip="Our Location">
           <iframe
             src="https://www.google.com/maps?q=Tejgaon,+Dhaka,+Bangladesh&output=embed"
-            className="w-full h-24 rounded-box border-2 border-accent/75"
+            className="w-full h-auto md:h-32 rounded-box border-2 border-accent/50 hover:border-accent transition-colors"
             allowFullScreen=""
             loading="lazy"
-          ></iframe>
+          />
         </div>
       </div>
     </footer>

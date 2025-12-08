@@ -19,19 +19,35 @@ import Loader from "../../ui/shared/Loader";
 
 const navLinks = {
   user: [
-    { path: "orders", name: "Orders", icon: FaBox },
-    { path: "reviews", name: "Reviews", icon: FaStar },
-    { path: "favorites", name: "Favorite Meals", icon: FaHeart },
+    { path: "/dashboard/user/orders", name: "My Orders", icon: FaBox },
+    { path: "/dashboard/user/reviews", name: "My Reviews", icon: FaStar },
+    {
+      path: "/dashboard/user/favorites",
+      name: "My Favorite Meals",
+      icon: FaHeart,
+    },
   ],
   chef: [
-    { path: "create-meal", name: "Create Meal", icon: FaPlusCircle },
-    { path: "my-meals", name: "My Meals", icon: FaList },
-    { path: "order-requests", name: "Order Requests", icon: FaClipboardList },
+    {
+      path: "/dashboard/chef/new-meal",
+      name: "Create Meal",
+      icon: FaPlusCircle,
+    },
+    { path: "/dashboard/chef/meals", name: "My Meals", icon: FaList },
+    {
+      path: "/dashboard/chef/orders",
+      name: "Order Requests",
+      icon: FaClipboardList,
+    },
   ],
   admin: [
-    { path: "users", name: "Users", icon: FaUsers },
-    { path: "roles", name: "Roles", icon: FaUserShield },
-    { path: "stats", name: "Stats", icon: FaChartBar },
+    { path: "/dashboard/admin/users", name: "Manage Users", icon: FaUsers },
+    {
+      path: "/dashboard/admin/roles",
+      name: "Manage Roles",
+      icon: FaUserShield,
+    },
+    { path: "/dashboard/admin/stats", name: "Manage Stats", icon: FaChartBar },
   ],
 };
 
@@ -47,7 +63,7 @@ const Sidebar = () => {
       <ul className="menu w-full grow items-center gap-2">
         <li className="w-full">
           <NavLink
-            to="/dashboard"
+            to="/dashboard/profile"
             className={({ isActive }) =>
               `is-drawer-close:tooltip is-drawer-close:tooltip-right items-center ${
                 isActive ? "bg-accent/50" : "bg-inherit"
