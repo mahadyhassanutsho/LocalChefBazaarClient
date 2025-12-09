@@ -101,15 +101,15 @@
 
 ### Create Meal
 
-- 🔘 Fields: food name, chef name, image upload, price, rating,
+- ✔️ Fields: food name, chef name, image upload, price, rating,
     ingredients, delivery time, experience, chefId, userEmail
-- 🔘 Save to meals collection
+- ✔️ Save to meals collection
 
 ### My Meals
 
-- 🔘 Show all meals created by chef
-- 🔘 Update meal
-- 🔘 Delete meal
+- ✔️ Show all meals created by chef
+- ✔️ Update meal
+- ✔️ Delete meal
 
 ### Order Requests
 

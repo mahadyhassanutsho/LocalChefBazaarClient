@@ -170,46 +170,48 @@ const UsersPage = () => {
                   {new Date(user.createdAt).toLocaleDateString()}
                 </td>
 
-                {/* ACTION BUTTONS */}
-                <td className="flex gap-2 justify-center">
-                  {/* View User */}
-                  <button
-                    className="btn btn-info btn-xs text-white tooltip"
-                    data-tip="View User"
-                    onClick={() => handleViewUser(user._id)}
-                  >
-                    <FaEye size={12} />
-                  </button>
-
-                  {/* Mark as Fraud */}
-                  {user.status === "active" ? (
+                {/* Actions Buttons */}
+                <td>
+                  <div className="flex gap-2 justify-center">
+                    {/* View User */}
                     <button
-                      className="btn btn-warning btn-xs text-white tooltip"
-                      data-tip="Mark as Fraud"
-                      disabled={isLoading}
-                      onClick={() => handleMarkAsFraud(user)}
+                      className="btn btn-info btn-xs text-white tooltip"
+                      data-tip="View User"
+                      onClick={() => handleViewUser(user._id)}
                     >
-                      <FaExclamationTriangle size={12} />
+                      <FaEye size={12} />
                     </button>
-                  ) : (
-                    <button
-                      className="btn btn-success btn-xs text-white tooltip"
-                      data-tip="Mark as Active"
-                      disabled={isLoading}
-                      onClick={() => handleMarkAsActive(user)}
-                    >
-                      <FaCheckCircle size={12} />
-                    </button>
-                  )}
 
-                  {/* Delete */}
-                  <button
-                    className="btn btn-error btn-xs text-white tooltip"
-                    data-tip="Delete User"
-                    onClick={() => handleDelete(user)}
-                  >
-                    <FaTrash size={12} />
-                  </button>
+                    {/* Mark as Fraud */}
+                    {user.status === "active" ? (
+                      <button
+                        className="btn btn-warning btn-xs text-white tooltip"
+                        data-tip="Mark as Fraud"
+                        disabled={isLoading}
+                        onClick={() => handleMarkAsFraud(user)}
+                      >
+                        <FaExclamationTriangle size={12} />
+                      </button>
+                    ) : (
+                      <button
+                        className="btn btn-success btn-xs text-white tooltip"
+                        data-tip="Mark as Active"
+                        disabled={isLoading}
+                        onClick={() => handleMarkAsActive(user)}
+                      >
+                        <FaCheckCircle size={12} />
+                      </button>
+                    )}
+
+                    {/* Delete */}
+                    <button
+                      className="btn btn-error btn-xs text-white tooltip"
+                      data-tip="Delete User"
+                      onClick={() => handleDelete(user)}
+                    >
+                      <FaTrash size={12} />
+                    </button>
+                  </div>
                 </td>
               </tr>
             ))}

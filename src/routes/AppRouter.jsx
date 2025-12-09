@@ -15,6 +15,7 @@ import ProfilePage from "../pages/ProfilePage";
 import UsersPage from "../pages/UsersPage";
 import RolesPage from "../pages/RolesPage";
 import NewMealPage from "../pages/NewMealPage";
+import MealsPage from "../pages/MealsPage";
 // Common
 import ErrorPage from "../pages/ErrorPage";
 
@@ -56,7 +57,7 @@ const router = createBrowserRouter([
             element: <RoleBasedRoute role="chef" />,
             children: [
               { path: "new-meal", element: <NewMealPage /> },
-              // { path: "meals", element: null },
+              { path: "meals", element: <MealsPage /> },
               // { path: "orders", element: null },
             ],
           },
