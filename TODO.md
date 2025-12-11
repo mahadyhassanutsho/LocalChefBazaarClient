@@ -23,7 +23,7 @@
 ## HOME PAGE
 
 - ✔️ Animated Hero / Banner
-- 🔘 Show 6 daily meals (dynamic)
+- ✔️ Show 6 daily meals (dynamic)
 - 🔘 Show customer reviews
 - ✔️ Add an extra custom section
 

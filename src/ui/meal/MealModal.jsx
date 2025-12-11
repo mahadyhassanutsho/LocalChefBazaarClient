@@ -16,10 +16,10 @@ const MealModal = ({ meal, onClose }) => {
           <img
             src={meal.image}
             alt={meal.name}
-            className="rounded-xl w-48 h-48 object-cover"
+            className="rounded-xl aspect-square w-full h-auto object-cover"
           />
 
-          <h1 className="text-3xl font-bold mt-4 text-center">{meal.name}</h1>
+          <h1 className="text-3xl font-bold text-center">{meal.name}</h1>
         </div>
 
         {/* Details */}
