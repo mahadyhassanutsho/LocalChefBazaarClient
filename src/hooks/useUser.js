@@ -20,11 +20,11 @@ const useUser = () => {
         .then((data) => data[0]),
   });
 
+  if (isError) throw new Error(error.message);
+
   return {
     user: userFromDB,
     isLoading,
-    isError,
-    error,
   };
 };
 

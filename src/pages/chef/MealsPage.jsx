@@ -19,7 +19,8 @@ const MealsPage = () => {
     isLoading,
   } = useQuery({
     queryKey: ["get-all-meals"],
-    queryFn: () => axios.get("/meals").then((res) => res.data),
+    queryFn: () =>
+      axios.get("/meals?sort=createdAt&order=desc").then((res) => res.data),
   });
 
   const [selectedMeal, setSelectedMeal] = useState(null);

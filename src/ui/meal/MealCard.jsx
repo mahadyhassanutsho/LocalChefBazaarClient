@@ -6,16 +6,14 @@ const MealCard = ({ meal }) => {
   return (
     <div className="bg-base-300 max-w-md space-y-4 rounded-box p-4 md:p-6">
       {/* Image + Name */}
-      <div className="flex flex-col items-center space-y-2">
+      <div className="space-y-2">
         <img
           src={meal.image}
           alt={meal.name}
-          className="rounded-box aspect-square w-auto h-auto object-cover"
+          className="rounded-box aspect-square w-full h-auto object-cover"
         />
 
-        <h1 className="text-3xl font-bold text-center truncate max-w-2xs">
-          {meal.name}
-        </h1>
+        <h1 className="text-3xl font-bold truncate max-w-2xs">{meal.name}</h1>
       </div>
 
       {/* Details */}

@@ -52,8 +52,8 @@
 
 ## MEAL DETAILS PAGE
 
-- 🔘 Show full meal info
-- 🔘 Show ingredients, delivery time, chef experience, chef ID
+- ✔️ Show full meal info
+- ✔️ Show ingredients, delivery time, chef experience, chef ID
 - 🔘 Order Now → goes to Order Page
 - 🔘 Reviews section (view reviews)
 - 🔘 Add review (save instantly)

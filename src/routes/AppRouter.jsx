@@ -1,29 +1,30 @@
+import { lazy } from "react";
 import { createBrowserRouter, RouterProvider } from "react-router";
 
 // Routes
-import PrivateRoute from "./PrivateRoute";
-import RoleBasedRoute from "./RoleBasedRoute";
+const PrivateRoute = lazy(() => import("./PrivateRoute"));
+const RoleBasedRoute = lazy(() => import("./RoleBasedRoute"));
 // Layouts
-import DefaultLayout from "../layouts/DefaultLayout";
-import RootLayout from "../layouts/RootLayout";
-import DashboardLayout from "../layouts/DashboardLayout";
+const DefaultLayout = lazy(() => import("../layouts/DefaultLayout"));
+const RootLayout = lazy(() => import("../layouts/RootLayout"));
+const DashboardLayout = lazy(() => import("../layouts/DashboardLayout"));
 // Pages
-import HomePage from "../pages/public/HomePage";
-import MealsPage from "../pages/public/MealsPage";
+const HomePage = lazy(() => import("../pages/public/HomePage"));
+const MealsPage = lazy(() => import("../pages/public/MealsPage"));
 // Private
-import ProfilePage from "../pages/private/ProfilePage";
-import MealDetailsPage from "../pages/private/MealDetailsPage";
+const ProfilePage = lazy(() => import("../pages/private/ProfilePage"));
+const MealDetailsPage = lazy(() => import("../pages/private/MealDetailsPage"));
 // Auth
-import LoginPage from "../pages/auth/LoginPage";
-import RegisterPage from "../pages/auth/RegisterPage";
+const LoginPage = lazy(() => import("../pages/auth/LoginPage"));
+const RegisterPage = lazy(() => import("../pages/auth/RegisterPage"));
 // Admin
-import UsersPage from "../pages/admin/UsersPage";
-import RolesPage from "../pages/admin/RolesPage";
+const UsersPage = lazy(() => import("../pages/admin/UsersPage"));
+const RolesPage = lazy(() => import("../pages/admin/RolesPage"));
 // Chef
-import NewMealPage from "../pages/chef/NewMealPage";
-import ManageMealsPage from "../pages/chef/MealsPage";
+const NewMealPage = lazy(() => import("../pages/chef/NewMealPage"));
+const ManageMealsPage = lazy(() => import("../pages/chef/MealsPage"));
 // Error
-import ErrorPage from "../pages/ErrorPage";
+const ErrorPage = lazy(() => import("../pages/ErrorPage"));
 
 const router = createBrowserRouter([
   {

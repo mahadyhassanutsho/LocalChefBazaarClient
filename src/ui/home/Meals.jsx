@@ -13,7 +13,10 @@ const Meals = () => {
     isLoading,
   } = useQuery({
     queryKey: ["get-all-meals"],
-    queryFn: () => axios.get("/meals?limit=6").then((res) => res.data),
+    queryFn: () =>
+      axios
+        .get("/meals?limit=6&sort=createdAt&order=desc")
+        .then((res) => res.data),
   });
 
   if (isLoading) return <Loader />;

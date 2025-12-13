@@ -28,7 +28,7 @@ const MealsPage = () => {
   if (isError) throw new Error(error.message);
 
   return (
-    <div className="space-y-4">
+    <div className="space-y-4 bg-base-200 p-6 rounded-box">
       <div className="text-center space-y-2">
         <h2 className="text-4xl font-bold">Latest Meals</h2>
         <p className="text-base text-base-content/75 max-w-xl mx-auto">
@@ -37,7 +37,7 @@ const MealsPage = () => {
         </p>
       </div>
 
-      <p className="text-lg text-base-content/75 font-semibold text-center">
+      <p className="text-lg text-base-content/50 font-semibold text-center">
         Showing {meals.length} {meals.length === 1 ? "meal" : "meals"}
       </p>
 
@@ -59,7 +59,7 @@ const MealsPage = () => {
           No meals found. Check back later!
         </div>
       ) : (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 place-items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {meals.map((meal) => (
             <MealCard key={meal._id} meal={meal} />
           ))}
