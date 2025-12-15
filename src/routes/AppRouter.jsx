@@ -23,6 +23,9 @@ const RolesPage = lazy(() => import("../pages/admin/RolesPage"));
 // Chef
 const NewMealPage = lazy(() => import("../pages/chef/NewMealPage"));
 const ManageMealsPage = lazy(() => import("../pages/chef/MealsPage"));
+// User
+const ReviewsPage = lazy(() => import("../pages/user/ReviewsPage"));
+const FavoritesPage = lazy(() => import("../pages/user/FavoritesPage"));
 // Error
 const ErrorPage = lazy(() => import("../pages/ErrorPage"));
 
@@ -74,7 +77,14 @@ const router = createBrowserRouter([
             children: [
               { path: "new-meal", element: <NewMealPage /> },
               { path: "meals", element: <ManageMealsPage /> },
-              // { path: "orders", element: null },
+            ],
+          },
+          {
+            path: "user/",
+            element: <RoleBasedRoute role="user" />,
+            children: [
+              { path: "reviews", element: <ReviewsPage /> },
+              { path: "favorites", element: <FavoritesPage /> },
             ],
           },
         ],

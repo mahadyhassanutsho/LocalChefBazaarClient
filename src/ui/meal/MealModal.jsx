@@ -48,7 +48,7 @@ const MealModal = ({ meal, onClose }) => {
               <FaListUl className="text-primary w-4" />
               <span className="font-semibold">Ingredients:</span>
             </div>
-            <ul className="ml-6 list-disc text-sm">
+            <ul className="ml-6 text-sm">
               {meal.ingredients?.map((ingredient, i) => (
                 <li key={i}>{ingredient}</li>
               ))}
