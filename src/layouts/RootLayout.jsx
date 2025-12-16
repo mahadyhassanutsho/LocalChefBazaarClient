@@ -5,11 +5,13 @@ import Footer from "../ui/layouts/Footer";
 
 const RootLayout = () => {
   return (
-    <div className="min-h-screen flex flex-col justify-between">
+    <div className="min-h-screen flex flex-col">
       <Navbar />
-      <div className="mt-2 mb-6">
+
+      <div className="flex-1 flex w-full mt-2 mb-6">
         <Outlet />
       </div>
+
       <Footer />
     </div>
   );

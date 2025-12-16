@@ -13,6 +13,10 @@ const HomePage = lazy(() => import("../pages/public/HomePage"));
 const MealsPage = lazy(() => import("../pages/public/MealsPage"));
 // Private
 const ProfilePage = lazy(() => import("../pages/private/ProfilePage"));
+const OrderPage = lazy(() => import("../pages/private/OrderPage"));
+const PaymentSuccessPage = lazy(() =>
+  import("../pages/private/PaymentSuccessPage")
+);
 const MealDetailsPage = lazy(() => import("../pages/private/MealDetailsPage"));
 // Auth
 const LoginPage = lazy(() => import("../pages/auth/LoginPage"));
@@ -46,6 +50,22 @@ const router = createBrowserRouter([
             element: (
               <PrivateRoute>
                 <MealDetailsPage />
+              </PrivateRoute>
+            ),
+          },
+          {
+            path: "order/payment-success",
+            element: (
+              <PrivateRoute>
+                <PaymentSuccessPage />
+              </PrivateRoute>
+            ),
+          },
+          {
+            path: "order/:id",
+            element: (
+              <PrivateRoute>
+                <OrderPage />
               </PrivateRoute>
             ),
           },

@@ -20,7 +20,7 @@ const DashboardLayout = () => {
           </label>
           <Logo />
         </nav>
-        <div className="p-6 md:p-12 bg-base-200 rounded-box flex-1">
+        <div className="p-6 md:p-12 bg-base-200 rounded-box flex-1 w-full">
           <Outlet />
         </div>
         <Footer />

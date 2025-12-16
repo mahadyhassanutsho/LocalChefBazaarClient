@@ -6,7 +6,7 @@ import {
   FaCalendarAlt,
 } from "react-icons/fa";
 import { TbCoinTakaFilled } from "react-icons/tb";
-import { useParams } from "react-router";
+import { Link, useParams } from "react-router";
 import { useQuery } from "@tanstack/react-query";
 
 import alert from "../../utils/alert";
@@ -61,7 +61,7 @@ const MealDetailsPage = () => {
   const [meal, isFavorite] = data;
 
   return (
-    <div className="p-6 bg-base-200 rounded-box space-y-6">
+    <div className="flex-1 w-full p-6 bg-base-200 rounded-box space-y-6">
       <h1 className="text-4xl font-bold">{meal.name}</h1>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
@@ -71,16 +71,21 @@ const MealDetailsPage = () => {
             alt={meal.name}
             className="rounded-box w-full aspect-square object-cover"
           />
-          <button
-            className={`btn ${
-              isFavorite
-                ? "btn-disabled pointer-events-none cursor-not-allowed"
-                : "btn-primary cursor-pointer"
-            }`}
-            onClick={() => !isFavorite && handleAddToFavorite(meal)}
-          >
-            {isFavorite ? "Added to Favorite" : "Add to Favorite"}
-          </button>
+          <div className="flex items-center gap-4">
+            <button
+              className={`btn ${
+                isFavorite
+                  ? "btn-disabled pointer-events-none cursor-not-allowed"
+                  : "btn-primary cursor-pointer"
+              }`}
+              onClick={() => !isFavorite && handleAddToFavorite(meal)}
+            >
+              {isFavorite ? "Added to Favorite" : "Add to Favorite"}
+            </button>
+            <Link to={`/order/${id}`} className="btn btn-primary">
+              Go to Order Page
+            </Link>
+          </div>
         </div>
 
         <div className="space-y-6">

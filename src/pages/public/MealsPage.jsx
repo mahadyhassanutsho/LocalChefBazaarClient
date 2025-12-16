@@ -28,7 +28,7 @@ const MealsPage = () => {
   if (isError) throw new Error(error.message);
 
   return (
-    <div className="space-y-4 bg-base-200 p-6 rounded-box">
+    <div className="flex-1 w-full space-y-4 bg-base-200 p-6 rounded-box">
       <div className="text-center space-y-2">
         <h2 className="text-4xl font-bold">Latest Meals</h2>
         <p className="text-base text-base-content/75 max-w-xl mx-auto">
