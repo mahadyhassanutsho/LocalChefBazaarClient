@@ -28,6 +28,7 @@ const StatsPage = lazy(() => import("../pages/admin/StatsPage"));
 // Chef
 const NewMealPage = lazy(() => import("../pages/chef/NewMealPage"));
 const ManageMealsPage = lazy(() => import("../pages/chef/MealsPage"));
+const OrderRequestsPage = lazy(() => import("../pages/chef/OrderRequestsPage"));
 // User
 const OrdersPage = lazy(() => import("../pages/user/OrdersPage"));
 const ReviewsPage = lazy(() => import("../pages/user/ReviewsPage"));
@@ -100,6 +101,7 @@ const router = createBrowserRouter([
             children: [
               { path: "new-meal", element: <NewMealPage /> },
               { path: "meals", element: <ManageMealsPage /> },
+              { path: "orders", element: <OrderRequestsPage /> },
             ],
           },
           {
