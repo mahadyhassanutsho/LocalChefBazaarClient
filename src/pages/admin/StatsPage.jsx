@@ -47,9 +47,9 @@ const StatsPage = () => {
   /* ---------- Chart Data ---------- */
 
   const ordersStatusData = [
-    { name: "Pending", value: pendingOrders },
-    { name: "Delivered", value: deliveredOrders },
-    { name: "Cancelled", value: cancelledOrders },
+    { name: "pending", value: pendingOrders },
+    { name: "delivered", value: deliveredOrders },
+    { name: "cancelled", value: cancelledOrders },
   ];
 
   const totalsData = [
@@ -81,8 +81,8 @@ const StatsPage = () => {
       {/* Charts */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         {/* Orders Status */}
-        <div className="bg-base-100 shadow rounded-box p-6">
-          <h3 className="text-xl font-semibold mb-4">Orders Status</h3>
+        <div className="bg-base-100 shadow rounded-box p-6 space-y-4">
+          <h3 className="text-xl font-semibold">Orders Status</h3>
           <ResponsiveContainer width="100%" height={300}>
             <PieChart>
               <Pie data={ordersStatusData} dataKey="value" label>
@@ -97,8 +97,8 @@ const StatsPage = () => {
         </div>
 
         {/* Orders & Revenue Trend */}
-        <div className="bg-base-100 shadow rounded-box p-6">
-          <h3 className="text-xl font-semibold mb-4">
+        <div className="bg-base-100 shadow rounded-box p-6 space-y-4">
+          <h3 className="text-xl font-semibold">
             Orders & Revenue (Last 7 Days)
           </h3>
           <ResponsiveContainer width="100%" height={300}>

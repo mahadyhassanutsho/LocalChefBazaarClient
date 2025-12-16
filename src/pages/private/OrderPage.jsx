@@ -43,7 +43,7 @@ const OrderPage = () => {
       `Your total price is ৳${totalPrice}. Do you want to confirm the order?`,
       async () => {
         try {
-          const { payment } = await axios
+          await axios
             .post("/orders", {
               quantity: Number(data.quantity),
               deliveryAddress: data.deliveryAddress,
@@ -56,7 +56,7 @@ const OrderPage = () => {
             "Your order has been placed successfully."
           );
           reset();
-          window.location.href = payment.url;
+          // window.location.href = payment.url;
         } catch (err) {
           alert.error(
             "Oops!",
