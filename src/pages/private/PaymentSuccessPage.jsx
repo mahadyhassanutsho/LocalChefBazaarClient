@@ -38,8 +38,6 @@ const PaymentSuccessPage = () => {
 
   if (!success) throw new Error("The Payment Failed.");
 
-  console.log(order);
-
   return (
     <div className="flex-1 w-full p-6 bg-base-200 rounded-box space-y-6">
       <div className="text-center space-y-2">
