@@ -15,7 +15,7 @@ const Meals = () => {
     queryKey: ["get-all-meals"],
     queryFn: () =>
       axios
-        .get("/meals?limit=6&sort=createdAt&order=desc")
+        .get("/meals?limit=6&sort=avgRating&order=desc")
         .then((res) => res.data),
   });
 

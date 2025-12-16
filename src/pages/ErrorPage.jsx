@@ -4,11 +4,11 @@ import Lottie from "lottie-react";
 import errorAnimation from "../assets/animations/error.json";
 
 const errorMessages = {
-  404: "Oops! The page you’re looking for doesn’t exist.",
-  401: "You are not authorized to view this page.",
-  403: "Access denied. You don't have permission.",
-  500: "Something broke on our side. We're fixing it!",
-  503: "Service is temporarily unavailable. Try again later.",
+  404: "Oops! The page you’re looking for doesn’t exist. Try refreshing the page.",
+  401: "You are not authorized to view this page. Try refreshing the page.",
+  403: "Access denied. You don't have permission. Try refreshing the page.",
+  500: "Something broke on our side. We're fixing it! Try refreshing the page.",
+  503: "Service is temporarily unavailable. Try again later or refresh the page.",
 };
 
 const ErrorPage = () => {
