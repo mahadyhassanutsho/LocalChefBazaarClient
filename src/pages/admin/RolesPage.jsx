@@ -126,7 +126,7 @@ const RolesPage = () => {
                   <div className="flex gap-2 justify-center">
                     {/* View User */}
                     <button
-                      className="btn btn-info btn-xs text-white tooltip"
+                      className="btn btn-info btn-xs tooltip"
                       data-tip="View User"
                       onClick={() => handleViewUser(req.user)}
                     >
@@ -136,7 +136,7 @@ const RolesPage = () => {
                     {/* Approve */}
                     {req.status === "pending" && (
                       <button
-                        className="btn btn-success btn-xs text-white tooltip"
+                        className="btn btn-success btn-xs tooltip"
                         data-tip="Approve Request"
                         onClick={() => handleApprove(req)}
                       >
@@ -146,7 +146,7 @@ const RolesPage = () => {
 
                     {/* Delete */}
                     <button
-                      className="btn btn-error btn-xs text-white tooltip"
+                      className="btn btn-error btn-xs tooltip"
                       data-tip="Delete Request"
                       onClick={() => handleDelete(req._id)}
                     >

@@ -19,7 +19,7 @@ const Hero = () => {
 
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-black">
             Homemade{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">
+            <span className="text-transparent bg-clip-text bg-linear-to-r from-primary to-accent">
               Meals
             </span>
             <br /> Delivered Fresh.

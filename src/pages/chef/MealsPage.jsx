@@ -120,7 +120,7 @@ const MealsPage = () => {
                   <div className="flex gap-2 justify-center">
                     {/* View */}
                     <button
-                      className="btn btn-info btn-xs text-white tooltip"
+                      className="btn btn-info btn-xs tooltip"
                       data-tip="View Meal"
                       onClick={() => setSelectedMeal(meal)}
                     >
@@ -129,7 +129,7 @@ const MealsPage = () => {
 
                     {/* Update */}
                     <button
-                      className="btn btn-warning btn-xs text-white tooltip"
+                      className="btn btn-warning btn-xs tooltip"
                       data-tip="Update Meal"
                       onClick={() => setEditingMeal(meal)}
                     >
@@ -138,7 +138,7 @@ const MealsPage = () => {
 
                     {/* Delete */}
                     <button
-                      className="btn btn-error btn-xs text-white tooltip"
+                      className="btn btn-error btn-xs tooltip"
                       data-tip="Delete Meal"
                       onClick={() => handleDelete(meal)}
                     >

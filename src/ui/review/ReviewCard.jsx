@@ -36,12 +36,12 @@ const ReviewCard = ({ review }) => {
 
       {/* Comment */}
       <p
-        className="flex justify-between items-center gap-2 bg-base-200 px-4 py-3 rounded-xl text-center text-gray-700"
+        className="flex justify-between items-center gap-2 bg-base-200 px-4 py-3 rounded-xl text-center text-base-content/70"
         title={comment}
       >
-        <FaQuoteLeft className="inline text-4xl text-gray-400" />
+        <FaQuoteLeft className="inline text-4xl text-base-content/50" />
         {comment}
-        <FaQuoteRight className="inline text-4xl text-gray-400" />
+        <FaQuoteRight className="inline text-4xl text-base-content/50" />
       </p>
 
       {/* Meal info */}
@@ -59,7 +59,7 @@ const ReviewCard = ({ review }) => {
             {meal.name}
           </Link>
           {/* Meal details */}
-          <div className="text-sm text-gray-500 space-y-1">
+          <div className="text-sm text-base-content/70 space-y-1">
             <div className="flex items-center gap-1">
               <span className="font-semibold">Price:</span> {meal.price}৳
             </div>

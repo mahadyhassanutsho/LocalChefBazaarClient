@@ -117,7 +117,7 @@ const FavoritesPage = () => {
                   <div className="flex gap-2 justify-center">
                     {/* View Review */}
                     <button
-                      className="btn btn-info btn-xs text-white tooltip"
+                      className="btn btn-info btn-xs tooltip"
                       data-tip="View Review"
                       onClick={() => handleViewMeal(favorite.meal)}
                     >
@@ -126,7 +126,7 @@ const FavoritesPage = () => {
 
                     {/* Delete */}
                     <button
-                      className="btn btn-error btn-xs text-white tooltip"
+                      className="btn btn-error btn-xs tooltip"
                       data-tip="Delete Review"
                       onClick={() => handleDeleteReview(favorite._id)}
                     >

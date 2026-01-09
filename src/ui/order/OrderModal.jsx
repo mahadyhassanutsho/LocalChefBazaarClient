@@ -19,7 +19,7 @@ const OrderModal = ({ order, onClose }) => {
   };
 
   return (
-    <div className="fixed inset-0 z-50 bg-black/40 flex items-center justify-center px-4">
+    <div className="fixed inset-0 z-50 bg-black/25 dark:bg-white/25 flex items-center justify-center px-4">
       <div className="bg-base-100 rounded-box w-full max-w-2xl shadow-xl relative">
         {/* Header */}
         <div className="flex items-center justify-between border-b px-6 py-4">

@@ -175,7 +175,7 @@ const UsersPage = () => {
                   <div className="flex gap-2 justify-center">
                     {/* View User */}
                     <button
-                      className="btn btn-info btn-xs text-white tooltip"
+                      className="btn btn-info btn-xs tooltip"
                       data-tip="View User"
                       onClick={() => handleViewUser(user._id)}
                     >
@@ -185,7 +185,7 @@ const UsersPage = () => {
                     {/* Mark as Fraud */}
                     {user.status === "active" ? (
                       <button
-                        className="btn btn-warning btn-xs text-white tooltip"
+                        className="btn btn-warning btn-xs tooltip"
                         data-tip="Mark as Fraud"
                         disabled={isLoading}
                         onClick={() => handleMarkAsFraud(user)}
@@ -194,7 +194,7 @@ const UsersPage = () => {
                       </button>
                     ) : (
                       <button
-                        className="btn btn-success btn-xs text-white tooltip"
+                        className="btn btn-success btn-xs tooltip"
                         data-tip="Mark as Active"
                         disabled={isLoading}
                         onClick={() => handleMarkAsActive(user)}
@@ -205,7 +205,7 @@ const UsersPage = () => {
 
                     {/* Delete */}
                     <button
-                      className="btn btn-error btn-xs text-white tooltip"
+                      className="btn btn-error btn-xs tooltip"
                       data-tip="Delete User"
                       onClick={() => handleDelete(user)}
                     >
