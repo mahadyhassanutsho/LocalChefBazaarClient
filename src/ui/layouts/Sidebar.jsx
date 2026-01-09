@@ -16,6 +16,7 @@ import {
 import useUser from "../../hooks/useUser";
 import Logout from "../../ui/auth/Logout";
 import Loader from "../../ui/shared/Loader";
+import ThemeToggle from "../shared/ThemeToggle";
 
 const navLinks = {
   user: [
@@ -61,6 +62,10 @@ const Sidebar = () => {
   return (
     <div className="py-2 min-h-full flex flex-col items-start bg-base-200 is-drawer-close:w-fit is-drawer-open:w-64 rounded-box rounded-b-none">
       <ul className="menu w-full grow items-center gap-2">
+        <li className="w-full flex items-center justify-center">
+          <ThemeToggle />
+        </li>
+
         <li className="w-full">
           <NavLink
             to="/dashboard/profile"

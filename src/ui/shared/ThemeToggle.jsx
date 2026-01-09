@@ -7,7 +7,9 @@ const ThemeToggle = ({ className = "" }) => {
 
   return (
     <label
-      className={`swap swap-rotate ${className}`}
+      className={`swap swap-rotate btn bg-transparent btn-circle border-3 border-transparent ${
+        isDark ? "hover:border-accent" : "hover:border-primary"
+      } transition-colors duration-150 ease-in-out ${className}`}
       aria-label="Toggle Theme"
     >
       <input
@@ -17,9 +19,9 @@ const ThemeToggle = ({ className = "" }) => {
         className="theme-controller"
       />
 
-      <FiSun className="swap-off h-5 w-5 text-primary" strokeWidth={2} />
+      <FiSun className="swap-off h-7 w-7 text-primary" strokeWidth={2} />
 
-      <FiMoon className="swap-on h-5 w-5 text-accent" strokeWidth={2} />
+      <FiMoon className="swap-on h-7 w-7 text-accent" strokeWidth={2} />
     </label>
   );
 };

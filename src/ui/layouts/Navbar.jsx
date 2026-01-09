@@ -36,7 +36,7 @@ const Navbar = () => {
   ));
 
   return (
-    <div className="navbar px-0 md:px-4 rounded-b-box hover:shadow-xs transition-shadow">
+    <div className="sticky top-0 z-50 bg-base-100 navbar px-0 md:px-4 rounded-b-box hover:shadow-xs transition-shadow">
       <div className="navbar-start gap-1">
         <div className="dropdown">
           <div

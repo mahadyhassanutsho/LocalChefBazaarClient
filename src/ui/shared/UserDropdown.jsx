@@ -8,7 +8,7 @@ const UserDropdown = ({ user }) => {
       <button
         tabIndex="1"
         role="button"
-        className="btn btn-ghost btn-circle avatar border-3 border-transparent hover:border-accent transition-colors duration-500 ease-in-out"
+        className="btn btn-ghost btn-circle avatar border-3 border-transparent hover:border-primary transition-colors duration-500 ease-in-out"
       >
         <div className="w-10 rounded-full">
           <img src={user.photoURL} />
