@@ -39,9 +39,9 @@ const ReviewCard = ({ review }) => {
         className="flex justify-between items-center gap-2 bg-base-200 px-4 py-3 rounded-xl text-center text-base-content/70"
         title={comment}
       >
-        <FaQuoteLeft className="inline text-4xl text-base-content/50" />
+        <FaQuoteLeft className="inline text-xl md:text-4xl text-base-content/50" />
         {comment}
-        <FaQuoteRight className="inline text-4xl text-base-content/50" />
+        <FaQuoteRight className="inline text-xl md:text-4xl text-base-content/50" />
       </p>
 
       {/* Meal info */}
@@ -49,7 +49,7 @@ const ReviewCard = ({ review }) => {
         <img
           src={meal.image}
           alt={meal.name}
-          className="w-20 h-20 rounded-box object-cover"
+          className="hidden sm:block w-16 h-auto aspect-square rounded-box object-cover"
         />
         <div className="flex flex-col gap-1">
           <Link

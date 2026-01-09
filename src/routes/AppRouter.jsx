@@ -1,9 +1,9 @@
-import { lazy } from "react";
+import { lazy, Suspense } from "react";
 import { createBrowserRouter, RouterProvider } from "react-router";
 
 // Routes
-const PrivateRoute = lazy(() => import("./PrivateRoute"));
-const RoleBasedRoute = lazy(() => import("./RoleBasedRoute"));
+import PrivateRoute from "./PrivateRoute";
+import RoleBasedRoute from "./RoleBasedRoute";
 // Layouts
 const DefaultLayout = lazy(() => import("../layouts/DefaultLayout"));
 const RootLayout = lazy(() => import("../layouts/RootLayout"));
@@ -34,7 +34,9 @@ const OrdersPage = lazy(() => import("../pages/user/OrdersPage"));
 const ReviewsPage = lazy(() => import("../pages/user/ReviewsPage"));
 const FavoritesPage = lazy(() => import("../pages/user/FavoritesPage"));
 // Error
-const ErrorPage = lazy(() => import("../pages/ErrorPage"));
+import ErrorPage from "../pages/ErrorPage";
+// Loading
+import LoadingPage from "../pages/LoadingPage";
 
 const router = createBrowserRouter([
   {
@@ -119,8 +121,12 @@ const router = createBrowserRouter([
   },
 ]);
 
-const AppRouter = ({ children }) => {
-  return <RouterProvider router={router}>{children}</RouterProvider>;
+const AppRouter = () => {
+  return (
+    <Suspense fallback={<LoadingPage />}>
+      <RouterProvider router={router} />
+    </Suspense>
+  );
 };
 
 export default AppRouter;

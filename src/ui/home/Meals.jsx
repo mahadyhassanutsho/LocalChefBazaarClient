@@ -25,11 +25,11 @@ const Meals = () => {
 
   return (
     <div className="space-y-4">
-      <h2 className="border-l-4 pl-4 rounded-box border-accent text-4xl font-bold">
+      <h2 className="text-4xl font-bold border-l-4 pl-4 border-accent">
         Latest Meals
       </h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 place-items-center gap-4">
         {meals.map((meal) => (
           <MealCard key={meal._id} meal={meal} />
         ))}
